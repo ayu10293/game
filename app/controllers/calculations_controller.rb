@@ -2,13 +2,13 @@ class CalculationsController < ApplicationController
   def new
     @calculation = Calculation.new
   end
-  
+
   def create
     calculation = Calculation.new(calculation_params)
     calculation.save
     redirect_to '/top'
-  end 
-  
+  end
+
   def index
   end
 
@@ -17,9 +17,9 @@ class CalculationsController < ApplicationController
 
   def edit
   end
-  
+
   private
   def calculation_params
-    params.require(:culculation).permit(:title, :body)
+    params.require(:calculation).permit(:title, :body)
   end
 end
