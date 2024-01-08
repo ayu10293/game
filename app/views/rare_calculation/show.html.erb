@@ -1,0 +1,43 @@
+<%= form_with url: rare_calculation_result_path, method: :post do |form| %>
+  <div class="mb-3">
+    <%= form.label "目標レアリティ", class: "form-label" %>
+    <%= form.number_field :target_rare, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア9", class: "form-label" %>
+    <%= form.number_field :rare_9, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア8", class: "form-label" %>
+    <%= form.number_field :rare_8, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア7", class: "form-label" %>
+    <%= form.number_field :rare_7, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア6", class: "form-label" %>
+    <%= form.number_field :rare_6, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア5", class: "form-label" %>
+    <%= form.number_field :rare_5, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア4", class: "form-label" %>
+    <%= form.number_field :rare_4, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア3", class: "form-label" %>
+    <%= form.number_field :rare_3, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア2", class: "form-label" %>
+    <%= form.number_field :rare_2, class: "form-control" %>
+  </div>
+  <div>
+    <%= form.label "レア1", class: "form-label" %>
+    <%= form.number_field :rare_1, class: "form-control" %>
+  </div>
+  <%= form.submit "Search" %>
+<% end %>

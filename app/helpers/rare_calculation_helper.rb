@@ -1,0 +1,2 @@
+module RareCalculationHelper
+end
