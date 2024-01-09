@@ -1,7 +1,7 @@
 <h1 class="center-text" >結果</h1>
 
 <div>
-  <h3>持っている数</h3>
+  <h3>現在持っている数</h3>
   <%= @have_total %>
 </div>
 
@@ -11,7 +11,11 @@
 </div>
 
 <div>
-  <h3>あと白換算で</h3>
-  <%= @rest %>
+  <% if @rest <= 0 %>
+    <h3>もう作れるよ！</h3>
+  <% else %>
+    <h3>あと白換算で</h3>
+    <%= @rest %>
+  <% end %>
 </div>
 
