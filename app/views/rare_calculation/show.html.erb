@@ -1,7 +1,13 @@
-<%= form_with url: rare_calculation_result_path, method: :post do |form| %>
+<% if @rare_calculation_form.errors.any? %>
+  <% @rare_calculation_form.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+<%= form_with model: @rare_calculation_form, url: rare_calculation_result_path, method: :post do |form| %>
   <div class="mb-3">
     <%= form.label "目標レアリティ", class: "form-label" %>
-    <%= form.number_field :target_rare, class: "form-control" %>
+    <%= form.number_field :target_rare, class: "form-control", min: 4, max: 12 %>
+    
   </div>
   <div>
     <%= form.label "レア9", class: "form-label" %>
