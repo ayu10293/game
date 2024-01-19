@@ -1,3 +1,27 @@
 ja:
-  activerecord:
-    
+  activemodel:
+    errors:
+      models:
+        rare_calculation_form:
+          attributes:
+            target_rare:
+              blank: "目標レアリティを入力してください"
+              not_a_number: "有効な数値を入力してください"
+            rare_9:
+              blank: "レア9の数を入力してください"
+            rare_8:
+              blank: "レア8の数を入力してください"
+            rare_7:
+              blank: "レア7の数を入力してください"
+            rare_6:
+              blank: "レア6の数を入力してください"
+            rare_5:
+              blank: "レア5の数を入力してください"
+            rare_4:
+              blank: "レア4の数を入力してください"
+            rare_3:
+              blank: "レア3の数を入力してください"
+            rare_2:
+              blank: "レア2の数を入力してください"
+            rare_1:
+              blank: "レア1の数を入力してください"

@@ -1,50 +1,58 @@
-<% if @rare_calculation_form.errors.any? %>
-  <% @rare_calculation_form.errors.full_messages.each do |message| %>
-    <%= message %>
+<div class="container text-center">
+  <% if @rare_calculation_form.errors.any? %>
+    <% @rare_calculation_form.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
-<%= form_with model: @rare_calculation_form, url: rare_calculation_result_path, method: :post do |form| %>
-  <div class="mb-3">
-    <%= form.label "目標レアリティ", class: "form-label" %>
-    <%= form.number_field :target_rare, class: "form-control", min: 4, max: 12 %>
 
-  </div>
-  <div>
-    <%= form.label "レア9", class: "form-label" %>
-    <%= form.number_field :rare_9, class: "form-control", min: 0, max: 3 %>
-  </div>
-  <div>
-    <%= form.label "レア8", class: "form-label" %>
-    <%= form.number_field :rare_8, class: "form-control", min: 0, max: 9 %>
-  </div>
-  <div>
-    <%= form.label "レア7", class: "form-label" %>
-    <%= form.number_field :rare_7, class: "form-control", min: 0, max: 27 %>
-  </div>
-  <div>
-    <%= form.label "レア6", class: "form-label" %>
-    <%= form.number_field :rare_6, class: "form-control", min: 0, max: 81 %>
-  </div>
-  <div>
-    <%= form.label "レア5", class: "form-label" %>
-    <%= form.number_field :rare_5, class: "form-control", min: 0, max: 243 %>
-  </div>
-  <div>
-    <%= form.label "レア4", class: "form-label" %>
-    <%= form.number_field :rare_4, class: "form-control", min: 0, max: 729 %>
-  </div>
-  <div>
-    <%= form.label "レア3", class: "form-label" %>
-    <%= form.number_field :rare_3, class: "form-control", min: 0, max: 2187 %>
-  </div>
-  <div>
-    <%= form.label "レア2", class: "form-label" %>
-    <%= form.number_field :rare_2, class: "form-control", min: 0, max: 6561 %>
-  </div>
-  <div>
-    <%= form.label "レア1", class: "form-label" %>
-    <%= form.number_field :rare_1, class: "form-control", min: 0, max: 19683 %>
-  </div>
-  <%= form.submit "結果を見る" %>
-<% end %>
+  <%= form_with model: @rare_calculation_form, url: rare_calculation_result_path, method: :post do |form| %>
+    <table class="table table-bordered">
+      <thead>
+        <tr><th>名前</th><th>年齢</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= form.label "目標レアリティ", class: "form-label" %></td>
+          <td><%= form.number_field :target_rare, class: "form-control-sm", min: 4, max: 12 %></td>
+        </tr>
+        <tr><td><%= form.label "レア9", class: "form-label" %></td><td><%= form.number_field :rare_9, class: "form-control-sm", min: 0, max: 3 %></td></tr>
+        <tr><td></td><td></td></tr>
+          <%= form.label "レア8", class: "form-label" %>
+          <%= form.number_field :rare_8, class: "form-control-sm", min: 0, max: 9 %>
+        <tr><td></td><td></td></tr>
+          <%= form.label "レア7", class: "form-label" %>
+          <%= form.number_field :rare_7, class: "form-control-sm", min: 0, max: 27 %>
+        </div>
+        <div class="mb-3">
+          <%= form.label "レア6", class: "form-label" %>
+          <%= form.number_field :rare_6, class: "form-control-sm", min: 0, max: 81 %>
+        </div>
+        <div class="mb-3">
+          <%= form.label "レア5", class: "form-label" %>
+          <%= form.number_field :rare_5, class: "form-control-sm", min: 0, max: 243 %>
+        </div>
+        <div class="mb-3">
+          <%= form.label "レア4", class: "form-label" %>
+          <%= form.number_field :rare_4, class: "form-control-sm", min: 0, max: 729 %>
+        </div>
+        <div class="mb-3">
+          <%= form.label "レア3", class: "form-label" %>
+          <%= form.number_field :rare_3, class: "form-control-sm", min: 0, max: 2187 %>
+        </div>
+        <div class="mb-3">
+          <%= form.label "レア2", class: "form-label" %>
+          <%= form.number_field :rare_2, class: "form-control-sm", min: 0, max: 6561 %>
+        </div>
+        <div class="mb-3">
+          <%= form.label "レア1", class: "form-label" %>
+          <%= form.number_field :rare_1, class: "form-control-sm", min: 0, max: 19683 %>
+        </div>
+      </div>
+      </table>
+    </table>
+    <%= form.submit "結果を見る" %>
+  <% end %>
+</div>
 

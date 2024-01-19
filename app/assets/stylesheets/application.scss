@@ -1,0 +1,22 @@
+// app/assets/stylesheets/application.scss
+
+// Bootstrap
+@import 'bootstrap';
+
+// カスタムスタイルの例
+body {
+  padding-top: 5rem; /* Bootstrapのfixed navbarに対応するための調整 */
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 画面全体の高さを占めるように設定 */
+}
+
+// グリッドシステムを使用してフォームを中央に配置
+.form-container {
+  max-width: 400px; /* フォームの最大幅を設定 */
+  width: 100%;
+}
