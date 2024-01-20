@@ -2,6 +2,7 @@
 
 // Bootstrap
 @import 'bootstrap';
+@import 'font-awesome';
 
 // カスタムスタイルの例
 body {
@@ -19,4 +20,8 @@ body {
 .form-container {
   max-width: 400px; /* フォームの最大幅を設定 */
   width: 100%;
+}
+
+.form-label {
+  font-size: 30px;
 }
