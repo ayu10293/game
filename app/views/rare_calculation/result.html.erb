@@ -2,15 +2,15 @@
   <h1 class="center-text" >結果</h1>
 
   <div>
-    <h3>現在持っている数</h3>
-    <%= @have_total %>
-  </div>
-  
-  <div>
     <h3>レア<%= @goal_rarity %>の必要数</h3>
     <%= @goal_count %>
   </div>
-  
+
+  <div>
+    <h3>現在持っている数</h3>
+    <%= @have_total %>
+  </div>
+
   <div>
     <% if @rest <= 0 %>
       <h3>もう作れるよ！</h3>
@@ -18,6 +18,10 @@
       <h3>あとレア1換算で</h3>
       <%= @rest %>
     <% end %>
+  </div>
+
+  <div>
+    <%= link_to "戻る", rare_calculation_show_path %>
   </div>
 </div>
 
