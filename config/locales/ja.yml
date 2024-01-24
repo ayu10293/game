@@ -1,7 +1,9 @@
 ja:
   activemodel:
-    rare_calculation_form:
-      attributes:
+    models:
+      rare_calculation_form: レア計算機
+    attributes:
+      rare_calculation_form:
         target_rare: 目標レアリティ
         rare_9: レア9
         rare_8: レア8
