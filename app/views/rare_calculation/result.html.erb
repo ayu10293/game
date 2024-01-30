@@ -8,10 +8,11 @@
       </div>
     <% end %>
   <% end %>
-
+  <%= image_tag("37756.jpg", class: "image") %>
   <%= form_with model: @rare_calculation_form, url: rare_calculation_result_path, method: :post do |form| %>
     <table class="table table-bordered">
       <tbody>
+
         <tr>
           <td><%= form.label :target_rare, "目標レアリティ", class: "form-label" %></td>
           <td><%= form.number_field :target_rare, class: "form-control-sm", min: 4, max: 12, style: "width:100px; height:53px;" %></td>
