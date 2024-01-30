@@ -63,24 +63,24 @@
   <% end %>
 </div>
 <div class="container text-center">
-  <h1 class="center-text" >結果</h1>
+  <h1 class="center-text" >結果(レア1換算)</h1>
 
   <div>
     <h3>レア<%= @goal_rarity %>の必要数</h3>
-    <%= @goal_count %>
+    <h1><%= @goal_count %></h1>
   </div>
 
   <div>
     <h3>現在持っている数</h3>
-    <%= @have_total %>
+    <h1><%= @have_total %></h1>
   </div>
 
   <div>
-    <% if @rest <= 0 %>
+    <h1><% if @rest <= 0 %></h1>
       <h3>もう作れるよ！</h3>
     <% else %>
-      <h3>あとレア1換算で</h3>
-      <%= @rest %>
+      <h3>残り</h3>
+      <h1><%= @rest %>個</h1>
     <% end %>
   </div>
 </div>
